@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# Movies Frontend Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+The Movies Frontend project is a React-based web application that provides a user interface for interacting with the Movies Backend. It allows users to:
 
-## Available Scripts
+- Browse a list of movies.
+- View detailed information about individual movies.
+- Rate movies.
+- Authenticate and manage sessions via a secure login.
 
-In the project directory, you can run:
+This project complements the [Movies Backend](https://github.com/AhmedAshrafOS/Movies-backend), providing a complete system for movie management.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend Framework**: React.js
+- **Styling**: Tailwind CSS
+- **State Management**: React Context API
+- **HTTP Client**: Axios
+- **Environment Management**: `.env`
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+1. **User Authentication**
+   - A secure login form is integrated with the Movies Backend API.
+   - Token storage in localStorage for session management.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Movie Browsing**
+   - Display a paginated list of movies with details like title, description, and average ratings.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Movie Ratings**
+   - Logged-in users can submit ratings for movies.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Responsive Design**
+   - Fully responsive layout using Tailwind CSS.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation Instructions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Node.js**: Version 14 or higher.
+- **npm** or **yarn**: For package management.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Steps to Install and Run
 
-## Learn More
+1. **Clone the Repository**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   git clone https://github.com/AhmedAshrafOS/Movies-Frontend.git
+   cd Movies-Frontend
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Install Dependencies**
 
-### Code Splitting
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Set Up Environment Variables**
 
-### Analyzing the Bundle Size
+   - Create a `.env` file in the root directory.
+   - Add the following variable to connect to the backend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+     ```env
+     REACT_APP_API_URL=http://localhost:8080/api
+     ```
 
-### Making a Progressive Web App
+4. **Run the Application**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```bash
+   npm start
+   ```
 
-### Advanced Configuration
+   - The application will be available at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+5. **Build for Production**
 
-### Deployment
+   - To create a production-ready build:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+     ```bash
+     npm run build
+     ```
 
-### `npm run build` fails to minify
+   - The build files will be located in the `build/` directory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Project Structure
+
+- `src/components/`
+  - Reusable React components (e.g., MovieCard, Navbar).
+- `src/pages/`
+  - Main application pages (e.g., Home, Login, MovieDetails).
+- `src/context/`
+  - React Context API files are used to manage the global state.
+- `src/services/`
+  - API service files (e.g., Axios configurations).
+
+---
+
+## Notes for Reviewers
+
+- **Purpose**: This frontend application demonstrates user-centric features for interacting with the Movies Backend API.
+- **Focus Areas**:
+  - Integration with backend APIs for authentication and CRUD operations.
+  - Responsive and user-friendly design.
+- **Recommendation**: Test the frontend alongside the backend for a seamless experience.
+
+Contributions and feedback are welcome!
+
