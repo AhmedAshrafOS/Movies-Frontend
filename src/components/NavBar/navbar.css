@@ -1,0 +1,33 @@
+/* navbar.css */
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f3f4f6; /* Tailwind's bg-gray-200 equivalent */
+    border: 1px solid #e5e7eb; /* Tailwind's border-gray-300 equivalent */
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .search-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    color: #6b7280; /* Tailwind's text-gray-500 equivalent */
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    width: 300px; /* Adjusted for a wider input field */
+    background: transparent;
+    font-size: 1rem;
+    color: #111827; /* Tailwind's text-gray-900 equivalent */
+  }
+  
